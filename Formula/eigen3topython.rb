@@ -5,6 +5,12 @@ class Eigen3topython < Formula
   sha256 "36b4462e7a924eee0dc8462ce56e5cc58e7196d9b6b4732750462fb507934de0"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen3topython-1.0.2"
+    sha256 cellar: :any_skip_relocation, catalina:     "f6cd97425dd14fafef1ce6eb15114c60cc2366a17edffb82929a268c8f7a1618"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4ac6a69a31a0e14697251d3fe48d681a48cdad2ef24aa842f4abb9b5dfa32ea4"
+  end
+
   depends_on "cmake" => :build
   depends_on "cython" => :build
   depends_on "eigen" => :build

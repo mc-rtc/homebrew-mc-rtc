@@ -5,6 +5,12 @@ class Spacevecalg < Formula
   sha256 "a94645cafcd1b6a0e16e7b8bf53339f2468c3b26a1e234e8af17facf0ce021f4"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/spacevecalg-1.1.1"
+    sha256 cellar: :any_skip_relocation, catalina:     "20ec29362dbfdc48b7bd8dc1ff0c3a099ecb56f9b3f9c59b22f61e5292f54d00"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c31a65f4c77bb51469c65fadbb1f1d211d73650190afaf3e079e5f8bd8b1965c"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "cython" => :build
   depends_on "eigen"

@@ -5,6 +5,12 @@ class SchCorePython < Formula
   sha256 "89e4ce4d5a479a62aba5450bf6d22540fded2e3ea7c34e177c9606104ead64f1"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-python-1.0.2"
+    sha256 cellar: :any,                 catalina:     "042b598859d44a7cd4e7f0e98043eefc70e44c3ebb513ee10ec13a54fff2f5ca"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "043b9c16c18865d3d71e8b37f8df8e18d5736093bfe77873e3d28ce2ed30b9c3"
+  end
+
   depends_on "cmake" => :build
   depends_on "cython" => :build
   depends_on "sch-core"

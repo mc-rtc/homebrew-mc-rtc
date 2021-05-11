@@ -5,6 +5,12 @@ class McRbdynUrdf < Formula
   sha256 "54dc59c865fdf5006be2f2cfb6dcac071cb1ff7049df5c2067c93fa1f3aefd90"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rbdyn_urdf-1.1.0"
+    sha256 cellar: :any,                 catalina:     "00c629168eba7fb69c813c01c7936cd0942151b0a90a30acf1bce7b595dd77d3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "63cfd3a4ab82dd22e9a6bde94b4427c3f9ca82c2f311d1447dc3760c79ab8eb5"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "cython" => :build
   depends_on "rbdyn"

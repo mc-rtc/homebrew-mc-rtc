@@ -5,6 +5,12 @@ class EigenQuadprog < Formula
   sha256 "65274400ac887a6cc61dab2c30bc5fbdb2c364efd5e07788301e04583f8b6a31"
   license "LGPL-3.0-only"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-quadprog-1.1.1"
+    sha256 cellar: :any,                 catalina:     "f2b7c628a304f891013bd006d9e91dff756e30c1c4d958916b6d7b75e8505132"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e410c0669cbd61342df5383b0c503ed3c3b6c9ac762c24d76ad533e5df0da39a"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "eigen"
   depends_on "gcc" # for gfortran

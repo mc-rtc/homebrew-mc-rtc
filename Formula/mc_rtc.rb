@@ -5,6 +5,12 @@ class McRtc < Formula
   sha256 "382fb4bc67c03f446ff59b1c60cfe28125571fc64883bca879028788f3c38428"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.7.0"
+    sha256 catalina:     "7ce7958dc608c65f8a94891fbfdd64f5ad8cc80042c093df273fab4ca6b93962"
+    sha256 x86_64_linux: "4c8896451f00ccde7337fb515c1b2c15fadf2251df152c1edfe1f365a5dce2dc"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "cython" => :build
   depends_on "eigen-quadprog"

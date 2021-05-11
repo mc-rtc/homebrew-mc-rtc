@@ -5,6 +5,12 @@ class EigenQld < Formula
   sha256 "680e74f02245885cfa639993dd7224c4f5641f4d40ceb619dce710f93d6791c2"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-qld-1.2.1"
+    sha256 cellar: :any,                 catalina:     "d955fb7151d3a2647b5269915e0ec8ce6f781914926c52a559ac8267e1fa2888"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "8243e31ad6f7132da0fe60a9f2764d1b53b6525ae40eb5c4e311256965c0a9c4"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "cython" => :build
   depends_on "eigen"

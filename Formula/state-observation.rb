@@ -5,6 +5,12 @@ class StateObservation < Formula
   sha256 "12707b491a98be8cf9aad68469683610ed80691a119f3e4643a99db8e95c72be"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/state-observation-1.4.1"
+    sha256 cellar: :any,                 catalina:     "f2b1c9a74e7afa5986d45b99ae74b9c1cb5e5609cd10c591eaa229ea60a8460d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "78ef7168e1de721430a253f344862aef110b9bb58509faa81cd0a7eaf60df475"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "boost"
   depends_on "eigen"

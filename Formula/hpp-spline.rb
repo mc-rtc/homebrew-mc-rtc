@@ -5,6 +5,12 @@ class HppSpline < Formula
   sha256 "4a96ec81777befce539f649fa09ddf10f479e49adbe532b2599bba945655dea1"
   license ""
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/hpp-spline-4.8.3"
+    sha256 cellar: :any_skip_relocation, catalina:     "532a464be58385c735cee9f8a94fb7a6b78fb7db89481931eb936bebf6f2b6b1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3cd57416f95d7f10c53091c1da8366132eb9ed95ee4886f0e6f02066e375bdbc"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "eigen"
 

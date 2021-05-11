@@ -5,6 +5,12 @@ class SchCore < Formula
   sha256 "663a100678141a0c92448e43bf5108274617379bad5f9635938b9339aa28a5dc"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.1.0"
+    sha256 cellar: :any,                 catalina:     "2f2335e6ca1821cd71bc3aaf68f8bcdf4579f32635fd557cf844118659adf623"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b5b9f5b21223ce2fb6d1e3ea3f2c61112ff0d315e7b2ef632b744c4265e7fa3a"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "boost"
 

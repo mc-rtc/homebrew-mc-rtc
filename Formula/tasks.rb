@@ -5,6 +5,12 @@ class Tasks < Formula
   sha256 "7bc818aa2d210f5ee18e7be4505ba90f77aa987880dbb563e735d62563985810"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.3.1"
+    sha256 cellar: :any,                 catalina:     "c0c661751e0cf16c14964457c29bd90d65b411b6cb854f9b29ac54d660df3574"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "45c294ef9d42bef04a9c7bff41f887f531553d2401b534d241e8fef26285e3eb"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "cython" => :build
   depends_on "eigen-qld"

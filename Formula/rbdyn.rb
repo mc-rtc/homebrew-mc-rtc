@@ -1,8 +1,8 @@
 class Rbdyn < Formula
   desc "Classes and functions to model the dynamics of rigid body systems"
   homepage "https://github.com/jrl-umi3218/RBDyn"
-  url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.4.0/RBDyn-v1.4.0.tar.gz"
-  sha256 "fda8416586a96e0ecb8a66a73c5ade22ba072d5b32722538b8b87f3e80134bd7"
+  url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.5.0/RBDyn-v1.5.0.tar.gz"
+  sha256 "d018f57a354a4ea8e0cd50c2fdf018f9a510ff8cc34a12d12cff793120458e5b"
   license "BSD-2-Clause"
 
   bottle do

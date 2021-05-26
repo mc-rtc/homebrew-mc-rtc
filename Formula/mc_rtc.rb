@@ -7,9 +7,9 @@ class McRtc < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.7.0"
-    sha256 catalina:     "7ce7958dc608c65f8a94891fbfdd64f5ad8cc80042c093df273fab4ca6b93962"
-    sha256 x86_64_linux: "4c8896451f00ccde7337fb515c1b2c15fadf2251df152c1edfe1f365a5dce2dc"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.7.0_1"
+    sha256 catalina:     "9543ed78a88e20694007b603dd64a8d6c8f1a4ffa84fec39caf19296d1ff7fd7"
+    sha256 x86_64_linux: "ab5d3760c4564587f2b4c0a0674d89ef71fa8c1c835e3fc717c4883b85a168ad"
   end
 
   depends_on "cmake" => [:build, :test]

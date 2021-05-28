@@ -4,6 +4,7 @@ class SchCore < Formula
   url "https://github.com/jrl-umi3218/sch-core/releases/download/v1.1.0/sch-core-v1.1.0.tar.gz"
   sha256 "663a100678141a0c92448e43bf5108274617379bad5f9635938b9339aa28a5dc"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.1.0"
@@ -43,6 +44,7 @@ class SchCore < Formula
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
 
     args = std_cmake_args + %w[
+      -DCMAKE_CXX_STANDARD=11
       -DINSTALL_DOCUMENTATION:BOOL=OFF
       -DSCH_BUILD_BSD:BOOL=ON
     ]

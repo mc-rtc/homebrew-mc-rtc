@@ -63,6 +63,7 @@ class SchCore < Formula
 
     (testpath/"CMakeLists.txt").write <<~EOS
       cmake_minimum_required(VERSION 3.1)
+      set(CMAKE_CXX_STANDARD 11)
       project(Brewsch-core LANGUAGES CXX)
       find_package(sch-core REQUIRED)
       add_executable(main main.cpp common.cpp)

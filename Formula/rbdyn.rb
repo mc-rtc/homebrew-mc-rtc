@@ -7,9 +7,9 @@ class Rbdyn < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/rbdyn-1.5.0"
-    sha256 cellar: :any,                 catalina:     "3653942da738e3ad1c1446c2d092d9188a9e1d7ee35e359757e6eefd4a032fcb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "09e78c56b5b93711a06420f64e774cd70eb1f36f83757d8f0293ca80caec68d2"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/rbdyn-1.5.0_1"
+    sha256 cellar: :any,                 catalina:     "dfce390ae98d91bc4c89450e8b82b3967104471dbb6a6f7b6d99087f0ecf30e2"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1eafb09a2c8ae15f67f2855c2a6589b284af9bb206a85f36d7230dd470058501"
   end
 
   depends_on "cmake" => [:build, :test]

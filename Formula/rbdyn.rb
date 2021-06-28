@@ -6,9 +6,9 @@ class Rbdyn < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/rbdyn-1.5.0_1"
-    sha256 cellar: :any,                 catalina:     "dfce390ae98d91bc4c89450e8b82b3967104471dbb6a6f7b6d99087f0ecf30e2"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1eafb09a2c8ae15f67f2855c2a6589b284af9bb206a85f36d7230dd470058501"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/rbdyn-1.5.1"
+    sha256 cellar: :any,                 catalina:     "5d52074edfd0504c0f2cc8956f232a7a65ed0fa4e140c12a4ceb7cadc259d1f0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "c97a8916b831af70b727db1e63a6b859cf250bf4930fbd308040aa39cdd9ab40"
   end
 
   depends_on "cmake" => [:build, :test]

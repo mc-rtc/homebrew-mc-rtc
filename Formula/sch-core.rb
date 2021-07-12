@@ -6,9 +6,9 @@ class SchCore < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.1.0_1"
-    sha256 cellar: :any,                 catalina:     "9b8b331918ecaed27db5c88aa766e63b005db8aef6cdc1a7924dec1c81ead5d0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ef421d9266ccf18798c21f5de9d0e11e8836ab047c167ab4fedf88e5db9a26b9"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.2.0"
+    sha256 cellar: :any,                 catalina:     "38509c71434b81ea2b9f2b67f8ebfab889d9f7ed896cc0e71c465520f86d7d69"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "47ecc825bc2aa4b582b197b649175040318a3d61303857d28960a5179fea10dd"
   end
 
   depends_on "cmake" => [:build, :test]

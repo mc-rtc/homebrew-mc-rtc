@@ -1,10 +1,9 @@
 class SchCore < Formula
   desc "Implementation and computation algorithms for the convex hulls"
   homepage "https://github.com/jrl-umi3218/sch-core"
-  url "https://github.com/jrl-umi3218/sch-core/releases/download/v1.1.0/sch-core-v1.1.0.tar.gz"
-  sha256 "663a100678141a0c92448e43bf5108274617379bad5f9635938b9339aa28a5dc"
+  url "https://github.com/jrl-umi3218/sch-core/releases/download/v1.2.0/sch-core-v1.2.0.tar.gz"
+  sha256 "055c006449042af6eadf9294a7f4ea64744b20b55451791d2d710ca7e11680a3"
   license "BSD-2-Clause"
-  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.1.0_1"

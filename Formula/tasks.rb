@@ -1,8 +1,8 @@
 class Tasks < Formula
   desc "Make real-time control for kinematics tree and list of kinematics tree"
   homepage "https://github.com/jrl-umi3218/Tasks/"
-  url "https://github.com/jrl-umi3218/Tasks/releases/download/v1.4.0/Tasks-v1.4.0.tar.gz"
-  sha256 "9693d2f47d0c7b0d99a7d8817c2dc34d9a3fedd48dca1a7b66927b63ac765e24"
+  url "https://github.com/jrl-umi3218/Tasks/releases/download/v1.4.1/Tasks-v1.4.1.tar.gz"
+  sha256 "6e13af71b4510c6fbf2df7bace1b205cbec05a27c1907ae57ead4d51cdd332c4"
   license "BSD-2-Clause"
 
   bottle do

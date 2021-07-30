@@ -6,9 +6,9 @@ class Tasks < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.4.1"
-    sha256 cellar: :any,                 catalina:     "069daa176d9871b57fa23af6c96e3920a97a85dcc0b686cd7d2597122e97296a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "dc7e27acea1ad848387b49514478da7ed1e820875b45577160aee76cf6f8a81c"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.5.0"
+    sha256 cellar: :any,                 catalina:     "13a070f2625d382f797e3e1b3dfcca948b108edf888dcff116ea2876b24decda"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e58289a9aa84466c882fa6c2ecf9542825f1acf276017b05ef4247d920bd5fac"
   end
 
   depends_on "cmake" => [:build, :test]

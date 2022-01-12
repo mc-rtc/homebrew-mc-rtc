@@ -5,6 +5,12 @@ class Ndcurves < Formula
   sha256 "115eb4f8dffab324457dc1d56db26a10989bcab2d9c0a03d4c57ae78ba3d5c86"
   license "BSD-2-Clause"
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/ndcurves-1.1.1"
+    sha256 cellar: :any_skip_relocation, big_sur:      "a599bfbe24b97893ccee2fae8cb72b4806f36d2f1e88d6181ef787c5823c3e04"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "200721b312056f9d586231c6392ef777aa698949a5c0fc9266169c1259275875"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "boost"
   depends_on "eigen"

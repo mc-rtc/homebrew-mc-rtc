@@ -32,7 +32,7 @@ class Ndcurves < Formula
   test do
     (testpath/"CMakeLists.txt").write <<~EOS
       cmake_minimum_required(VERSION 3.1)
-      project(Brewhpp-spline LANGUAGES CXX)
+      project(Brewndcurves LANGUAGES CXX)
       find_package(ndcurves REQUIRED)
       add_executable(main main.cpp)
       target_link_libraries(main PUBLIC ndcurves::ndcurves)

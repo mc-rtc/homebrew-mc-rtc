@@ -15,11 +15,11 @@ class McRtc < Formula
   depends_on "cython" => :build
   depends_on "eigen-quadprog"
   depends_on "geos"
-  depends_on "hpp-spline"
   depends_on "libtool"
   depends_on "mc_rbdyn_urdf"
   depends_on "mc_rtc_data"
   depends_on "nanomsg"
+  depends_on "ndcurves"
   depends_on "spdlog"
   depends_on "state-observation"
   depends_on "tasks"

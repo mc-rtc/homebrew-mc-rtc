@@ -1,8 +1,8 @@
 class Ndcurves < Formula
   desc "Library for creating smooth cubic splines"
   homepage "https://github.com/loco-3d/ndcurves"
-  url "https://github.com/loco-3d/ndcurves/releases/download/v1.1.1/ndcurves-1.1.1.tar.gz"
-  sha256 "115eb4f8dffab324457dc1d56db26a10989bcab2d9c0a03d4c57ae78ba3d5c86"
+  url "https://github.com/loco-3d/ndcurves/releases/download/v1.1.2/ndcurves-1.1.2.tar.gz"
+  sha256 "03f0f776af89f389b3920ce0683d72fe818b038219c3c2a25527e658ad7fef86"
   license "BSD-2-Clause"
 
   bottle do

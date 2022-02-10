@@ -1,8 +1,8 @@
 class McRtc < Formula
   desc "Interface for simulated and real robotic systems suitable for real-time control"
   homepage "https://jrl-umi3218.github.io/mc_rtc/"
-  url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v1.8.2/mc_rtc-v1.8.2.tar.gz"
-  sha256 "b6fb08d0c359ca56c7144d74ae4a756a035c5996f4a942e41e268c8622430dce"
+  url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v1.9.0/mc_rtc-v1.9.0.tar.gz"
+  sha256 "8201146f50f0acf7400592e679043aa83c1635ffdffc6f0235cc2e6dce2189f5"
   license "BSD-2-Clause"
 
   bottle do
@@ -15,11 +15,11 @@ class McRtc < Formula
   depends_on "cython" => :build
   depends_on "eigen-quadprog"
   depends_on "geos"
-  depends_on "hpp-spline"
   depends_on "libtool"
   depends_on "mc_rbdyn_urdf"
   depends_on "mc_rtc_data"
   depends_on "nanomsg"
+  depends_on "ndcurves"
   depends_on "spdlog"
   depends_on "state-observation"
   depends_on "tasks"

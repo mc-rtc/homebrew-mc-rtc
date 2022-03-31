@@ -7,9 +7,8 @@ class McRbdynUrdf < Formula
   revision 3
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rbdyn_urdf-1.1.0_2"
-    sha256 cellar: :any,                 catalina:     "aed867f0a8c9d16525cef20ff64d9d45f845c894af4981ed6973510c14d4035a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b047a7a97bfb63164d3e8cddc05152e0dfcbaeddd481eca40e51c8c329c70e62"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rbdyn_urdf-1.1.0_3"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "1285b0f7fabef33509bd45910f0f9bdcd929a8d4b4c30137a103d089ae3e4ef1"
   end
 
   depends_on "cmake" => [:build, :test]

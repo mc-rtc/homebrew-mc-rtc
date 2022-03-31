@@ -4,6 +4,7 @@ class Tasks < Formula
   url "https://github.com/jrl-umi3218/Tasks/releases/download/v1.5.0/Tasks-v1.5.0.tar.gz"
   sha256 "d1c81acb795c3113ab211212556c6804c94d7225e424c75c1ab9990c10fe060c"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.5.0"

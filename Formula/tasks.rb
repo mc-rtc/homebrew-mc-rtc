@@ -7,9 +7,8 @@ class Tasks < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.5.0"
-    sha256 cellar: :any,                 catalina:     "13a070f2625d382f797e3e1b3dfcca948b108edf888dcff116ea2876b24decda"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e58289a9aa84466c882fa6c2ecf9542825f1acf276017b05ef4247d920bd5fac"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.5.0_1"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ea55c01301761f5f626b7342cbcf719cb2f492ae6fed56b8d61b1301d7c14c22"
   end
 
   depends_on "cmake" => [:build, :test]

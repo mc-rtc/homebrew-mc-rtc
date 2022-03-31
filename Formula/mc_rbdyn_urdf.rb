@@ -4,7 +4,7 @@ class McRbdynUrdf < Formula
   url "https://github.com/jrl-umi3218/mc_rbdyn_urdf/releases/download/v1.1.0/mc_rbdyn_urdf-v1.1.0.tar.gz"
   sha256 "54dc59c865fdf5006be2f2cfb6dcac071cb1ff7049df5c2067c93fa1f3aefd90"
   license "BSD-2-Clause"
-  revision 2
+  revision 3
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rbdyn_urdf-1.1.0_2"

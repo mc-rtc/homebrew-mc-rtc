@@ -4,6 +4,7 @@ class McRtc < Formula
   url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v1.9.0/mc_rtc-v1.9.0.tar.gz"
   sha256 "8201146f50f0acf7400592e679043aa83c1635ffdffc6f0235cc2e6dce2189f5"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.9.0"

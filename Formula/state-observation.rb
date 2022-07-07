@@ -4,6 +4,7 @@ class StateObservation < Formula
   url "https://github.com/jrl-umi3218/state-observation/releases/download/v1.4.1/state-observation-v1.4.1.tar.gz"
   sha256 "12707b491a98be8cf9aad68469683610ed80691a119f3e4643a99db8e95c72be"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/state-observation-1.4.1"

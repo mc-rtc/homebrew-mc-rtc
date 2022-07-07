@@ -6,9 +6,9 @@ class Ndcurves < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/ndcurves-1.1.2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "e176492855f6910c895ad1d73daa04ad60b6d83471953c25385b007afb38bd6c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3925f5216750832da3276c06a174a45b51612a9bffefa70a08023e34fa6ed6e0"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/ndcurves-1.1.4"
+    sha256 cellar: :any_skip_relocation, big_sur:      "7302a11bfe6d7050464887799af29222b44a5ea030716d8131c57a583bc94f9a"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "3c3ad5ac682cd58bc40768f03e683bbf1dcc9e3062abbfc859c869154feb3a1b"
   end
 
   depends_on "cmake" => [:build, :test]

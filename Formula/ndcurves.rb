@@ -1,8 +1,8 @@
 class Ndcurves < Formula
   desc "Library for creating smooth cubic splines"
   homepage "https://github.com/loco-3d/ndcurves"
-  url "https://github.com/loco-3d/ndcurves/releases/download/v1.1.2/ndcurves-1.1.2.tar.gz"
-  sha256 "03f0f776af89f389b3920ce0683d72fe818b038219c3c2a25527e658ad7fef86"
+  url "https://github.com/loco-3d/ndcurves/releases/download/v1.1.4/ndcurves-1.1.4.tar.gz"
+  sha256 "5318f5ebb40cb443e42561e88a09c505f89eefffa0ad1b122bdac34d0468f7e4"
   license "BSD-2-Clause"
 
   bottle do
@@ -32,7 +32,7 @@ class Ndcurves < Formula
   test do
     (testpath/"CMakeLists.txt").write <<~EOS
       cmake_minimum_required(VERSION 3.1)
-      project(Brewhpp-spline LANGUAGES CXX)
+      project(Brewndcurves LANGUAGES CXX)
       find_package(ndcurves REQUIRED)
       add_executable(main main.cpp)
       target_link_libraries(main PUBLIC ndcurves::ndcurves)

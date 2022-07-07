@@ -7,8 +7,8 @@ class McRtc < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.10.0"
-    sha256 x86_64_linux: "d911d0fd82faff81e65e9668c72e008f3cba2520f31f2d32ec90ee818f1ea7b7"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.10.0_1"
+    sha256 x86_64_linux: "4295daacd2af7b70c3795d4242504649480771bd6572703accf9d8d1fd88f788"
   end
 
   depends_on "cmake" => [:build, :test]

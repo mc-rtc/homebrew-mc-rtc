@@ -4,6 +4,7 @@ class Ndcurves < Formula
   url "https://github.com/loco-3d/ndcurves/releases/download/v1.1.4/ndcurves-1.1.4.tar.gz"
   sha256 "5318f5ebb40cb443e42561e88a09c505f89eefffa0ad1b122bdac34d0468f7e4"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/ndcurves-1.1.4"

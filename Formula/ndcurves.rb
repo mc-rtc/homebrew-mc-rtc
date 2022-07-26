@@ -7,9 +7,9 @@ class Ndcurves < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/ndcurves-1.1.4"
-    sha256 cellar: :any_skip_relocation, big_sur:      "7302a11bfe6d7050464887799af29222b44a5ea030716d8131c57a583bc94f9a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3c3ad5ac682cd58bc40768f03e683bbf1dcc9e3062abbfc859c869154feb3a1b"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/ndcurves-1.1.4_1"
+    sha256 cellar: :any_skip_relocation, big_sur:      "89768c5f0807043ea6c678b7cfb504f8aa4967af8724615366f63898b57cf813"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d629f6e58320bd1c483bf28fabe95758bc2525be32975cdf1f99291171b9ed1a"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -7,9 +7,9 @@ class SchCore < Formula
   revision 3
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.2.0_2"
-    sha256 cellar: :any,                 big_sur:      "690d111037005f1a94b98892ee3b8aad3b175d2bfe661f14cf1b9fe90be41b7b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "6a28212a09b7281b218126d551b6602a16bc60325ab5986927e3b0ab8782abaa"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.2.0_3"
+    sha256 cellar: :any,                 big_sur:      "7c1e78f9ccfcee50340e759195e1040639e55d74e3e9a59804b5ddb832198ae0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "d20e218ed2204df1a4ae8c4134bb64e296898b430b5713a6e28a18cc34276c89"
   end
 
   depends_on "cmake" => [:build, :test]

@@ -7,9 +7,9 @@ class Eigen3topython < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen3topython-1.0.2"
-    sha256 cellar: :any_skip_relocation, catalina:     "f6cd97425dd14fafef1ce6eb15114c60cc2366a17edffb82929a268c8f7a1618"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4ac6a69a31a0e14697251d3fe48d681a48cdad2ef24aa842f4abb9b5dfa32ea4"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen3topython-1.0.2_1"
+    sha256 cellar: :any_skip_relocation, big_sur:      "09b6cdd142ec0378df584b90603d6479ba115aa7b40a06912dd07ceb025e1e2e"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "81c60ef076a1acd4d1153355a7080300103942e464b429816733c027d21e7a6e"
   end
 
   depends_on "cmake" => :build

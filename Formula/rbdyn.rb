@@ -2,8 +2,9 @@ class Rbdyn < Formula
   desc "Classes and functions to model the dynamics of rigid body systems"
   homepage "https://github.com/jrl-umi3218/RBDyn"
   url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.6.0/RBDyn-v1.6.0.tar.gz"
-  sha256 "3334180f150b19f4c0c30a6b96ac5616d1fe1dcb66e8eecad4db29fc361b0c01"
+  sha256 "2fc0ad358437350e0051fdca4fb67646ffbe8d49662266fc548cca26c9dc16c1"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/rbdyn-1.5.2_2"

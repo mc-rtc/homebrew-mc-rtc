@@ -4,7 +4,7 @@ class Eigen3topython < Formula
   url "https://github.com/jrl-umi3218/Eigen3ToPython/releases/download/v1.0.2/Eigen3ToPython-v1.0.2.tar.gz"
   sha256 "36b4462e7a924eee0dc8462ce56e5cc58e7196d9b6b4732750462fb507934de0"
   license "BSD-2-Clause"
-  revision 2
+  revision 3
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen3topython-1.0.2_1"
@@ -22,8 +22,9 @@ class Eigen3topython < Formula
   patch :DATA
 
   def install
-    xy = Language::Python.major_minor_version Formula["python@3.9"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
+    python = "python3.10"
+    site_packages = Language::Python.site_packages(python)
+    ENV.prepend_path "PYTHONPATH", Formula["cython"].opt_libexec/site_packages
 
     args = std_cmake_args + %W[
       -DPIP_INSTALL_PREFIX=#{prefix}

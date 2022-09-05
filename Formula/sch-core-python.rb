@@ -1,10 +1,9 @@
 class SchCorePython < Formula
   desc "Python bindings for the sch library"
   homepage "https://github.com/jrl-umi3218/sch-core-python/"
-  url "https://github.com/jrl-umi3218/sch-core-python/releases/download/v1.0.2/sch-core-python-v1.0.2.tar.gz"
-  sha256 "89e4ce4d5a479a62aba5450bf6d22540fded2e3ea7c34e177c9606104ead64f1"
+  url "https://github.com/jrl-umi3218/sch-core-python/releases/download/v1.0.3/sch-core-python-v1.0.3.tar.gz"
+  sha256 "33f5af012b788b41291cfbf89649e49bf15e83acd0ec68b2baa20a972c42c059"
   license "BSD-2-Clause"
-  revision 4
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-python-1.0.2_3"
@@ -22,10 +21,6 @@ class SchCorePython < Formula
     ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
 
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
-
-    inreplace "CMakeLists.txt",
-              "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
-              "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
 
     args = std_cmake_args + %W[
       -DINSTALL_DOCUMENTATION:BOOL=OFF

@@ -4,7 +4,7 @@ class Eigen3topython < Formula
   url "https://github.com/jrl-umi3218/Eigen3ToPython/releases/download/v1.0.2/Eigen3ToPython-v1.0.2.tar.gz"
   sha256 "36b4462e7a924eee0dc8462ce56e5cc58e7196d9b6b4732750462fb507934de0"
   license "BSD-2-Clause"
-  revision 4
+  revision 5
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen3topython-1.0.2_1"
@@ -24,6 +24,7 @@ class Eigen3topython < Formula
   def install
     python = "python3.10"
     site_packages = Language::Python.site_packages(python)
+    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
     ENV.prepend_path "PYTHONPATH", Formula["cython"].opt_libexec/site_packages
 
     args = std_cmake_args + %W[
@@ -37,7 +38,7 @@ class Eigen3topython < Formula
   end
 
   test do
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
+    system Formula["python@3.10"].opt_bin/"python3", "-c", <<~EOS
       import eigen
       print("Eigen version: {}".format(eigen.EigenVersion()))
       print("Random Vector3d: {}".format(eigen.Vector3d.Random().transpose()))

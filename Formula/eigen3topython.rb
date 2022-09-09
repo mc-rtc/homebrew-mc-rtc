@@ -13,8 +13,8 @@ class Eigen3topython < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "cython" => :build
   depends_on "eigen" => :build
+  depends_on "libcython" => :build
   depends_on "numpy"
   depends_on "python@3.10"
 
@@ -25,7 +25,7 @@ class Eigen3topython < Formula
     python = "python3.10"
     site_packages = Language::Python.site_packages(python)
     ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
-    ENV.prepend_path "PYTHONPATH", Formula["cython"].opt_libexec/site_packages
+    ENV.prepend_path "PYTHONPATH", Formula["libcython"].opt_libexec/site_packages
 
     inreplace "CMakeLists.txt", "python3", "python3.10"
 

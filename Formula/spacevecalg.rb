@@ -4,7 +4,7 @@ class Spacevecalg < Formula
   url "https://github.com/jrl-umi3218/SpaceVecAlg/releases/download/v1.2.1/SpaceVecAlg-v1.2.1.tar.gz"
   sha256 "6eea01222db773f5f6e53b96f4a03b4918bd208b91b3c4186c6c56ee50fed21d"
   license "BSD-2-Clause"
-  revision 2
+  revision 3
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/spacevecalg-1.2.1_1"
@@ -37,7 +37,7 @@ class Spacevecalg < Formula
   end
 
   test do
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
+    system Formula["python@3.10"].opt_bin/"python3.10", "-c", <<~EOS
       import sva
       print(sva.PTransformd.Identity())
     EOS

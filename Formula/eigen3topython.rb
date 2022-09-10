@@ -24,8 +24,8 @@ class Eigen3topython < Formula
   def install
     python = "python3.10"
     site_packages = Language::Python.site_packages(python)
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
     ENV.prepend_path "PYTHONPATH", Formula["libcython"].opt_libexec/site_packages
+    ENV.prepend_path "PATH", Formula["python@3.10"].opt_libexec/"bin"
 
     inreplace "CMakeLists.txt", "python3", "python3.10"
 
@@ -40,7 +40,7 @@ class Eigen3topython < Formula
   end
 
   test do
-    system Formula["python@3.10"].opt_bin/"python3", "-c", <<~EOS
+    system Formula["python@3.10"].opt_bin/"python3.10", "-c", <<~EOS
       import eigen
       print("Eigen version: {}".format(eigen.EigenVersion()))
       print("Random Vector3d: {}".format(eigen.Vector3d.Random().transpose()))

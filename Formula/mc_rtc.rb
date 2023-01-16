@@ -14,6 +14,7 @@ class McRtc < Formula
   depends_on "cmake" => [:build, :test]
   depends_on "eigen-quadprog"
   depends_on "geos"
+  depends_on "libnotify"
   depends_on "libtool"
   depends_on "mc_rtc_data"
   depends_on "nanomsg"

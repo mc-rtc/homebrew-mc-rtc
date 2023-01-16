@@ -1,4 +1,4 @@
-class TVM < Formula
+class Tvm < Formula
   desc "Writing and solving linear control problems for robot"
   homepage "https://github.com/jrl-umi3218/tvm/"
   url "https://github.com/jrl-umi3218/tvm/releases/download/v0.9.0/tvm-v0.9.0.tar.gz"

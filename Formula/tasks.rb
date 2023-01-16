@@ -1,10 +1,10 @@
 class Tasks < Formula
   desc "Make real-time control for kinematics tree and list of kinematics tree"
   homepage "https://github.com/jrl-umi3218/Tasks/"
-  url "https://github.com/jrl-umi3218/Tasks/releases/download/v1.7.0/Tasks-v1.7.0.tar.gz"
-  sha256 "2758109ee2c9ff353f6fe7f45819a7be1c8d597b2ccfd95bf295ef7c0e957947"
+  url "https://github.com/jrl-umi3218/Tasks/releases/download/v1.7.2/Tasks-v1.7.2.tar.gz"
+  sha256 "61df37834b226dff09acea2a0ec1a6f380110e9353f0218db9e793816fb145f4"
   license "BSD-2-Clause"
-  revision 1
+  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.7.0_1"
@@ -13,10 +13,9 @@ class Tasks < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "cython" => :build
   depends_on "eigen-qld"
   depends_on "rbdyn"
-  depends_on "sch-core-python"
+  depends_on "sch-core"
 
   resource "arms.h" do
     url "https://raw.githubusercontent.com/jrl-umi3218/Tasks/v1.3.1/tests/arms.h"
@@ -24,19 +23,15 @@ class Tasks < Formula
   end
 
   def install
-    xy = Language::Python.major_minor_version Formula["python"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
-
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
 
     inreplace "cmake/cython/cython.cmake",
               "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
               "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
 
-    args = std_cmake_args + %W[
+    args = std_cmake_args + %w[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
-      -DPIP_INSTALL_PREFIX=#{prefix}
-      -DPYTHON_BINDING_FORCE_PYTHON3:BOOL=ON
+      -DPYTHON_BINDING:BOOL=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args
@@ -114,10 +109,5 @@ class Tasks < Formula
     system "cmake", ".", *std_cmake_args
     system "cmake", "--build", "."
     system "./main"
-
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
-      import tasks
-      import tasks.qp as qp
-    EOS
   end
 end

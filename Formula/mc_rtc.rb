@@ -4,7 +4,7 @@ class McRtc < Formula
   url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v2.0.0/mc_rtc-v2.0.0.tar.gz"
   sha256 "0bb6fa25c8b0aeff9c67a75f66e4fb2d34c782b66511c4d93aa290a0cf0e1526"
   license "BSD-2-Clause"
-  revision 0
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.11.0"
@@ -22,6 +22,7 @@ class McRtc < Formula
   depends_on "spdlog"
   depends_on "state-observation"
   depends_on "tasks"
+  depends_on "tvm"
 
   def install
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?

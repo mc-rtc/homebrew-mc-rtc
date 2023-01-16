@@ -1,8 +1,8 @@
 class McRtcData < Formula
   desc "Data for the mc_rtc package"
   homepage "https://github.com/jrl-umi3218/mc_rtc_data"
-  url "https://github.com/jrl-umi3218/mc_rtc_data/releases/download/v1.0.4/mc_rtc_data-v1.0.4.tar.gz"
-  sha256 "682c0bff88970668567c9f06f5bfad57032b48ba488e66ae5466b31d49b77f3f"
+  url "https://github.com/jrl-umi3218/mc_rtc_data/releases/download/v1.0.6/mc_rtc_data-v1.0.6.tar.gz"
+  sha256 "d53821c750491e0d001923fbed8f414fb6071a85913f300d21d1fdd18689b341"
   license "BSD-2-Clause"
 
   bottle do

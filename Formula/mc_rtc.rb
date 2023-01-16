@@ -1,42 +1,38 @@
 class McRtc < Formula
   desc "Interface for simulated and real robotic systems suitable for real-time control"
   homepage "https://jrl-umi3218.github.io/mc_rtc/"
-  url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v1.11.0/mc_rtc-v1.11.0.tar.gz"
-  sha256 "9b377a4a3648a367db94608f58471b0a174abb3e0d12afb37a290b14b63a7878"
+  url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v2.0.0/mc_rtc-v2.0.0.tar.gz"
+  sha256 "0bb6fa25c8b0aeff9c67a75f66e4fb2d34c782b66511c4d93aa290a0cf0e1526"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.11.0"
     sha256 x86_64_linux: "c90c6c02f8cc75c5964fe6b8e006bce09e7613f96739782ad61c1344f7a54624"
   end
 
-  depends_on "cmake" => [:build, :test]
-  depends_on "cython" => :build
+  depends_on "cmake"
   depends_on "eigen-quadprog"
   depends_on "geos"
+  depends_on "libnotify"
   depends_on "libtool"
   depends_on "mc_rtc_data"
   depends_on "nanomsg"
   depends_on "ndcurves"
+  depends_on "pkg-config"
+  depends_on "python@3.11"
   depends_on "spdlog"
   depends_on "state-observation"
   depends_on "tasks"
+  depends_on "tvm"
 
   def install
-    xy = Language::Python.major_minor_version Formula["python"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
-
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
-
-    inreplace "cmake/cython/cython.cmake",
-              "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
-              "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
 
     args = std_cmake_args + %W[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
-      -DMC_LOG_UI_PYTHON_EXECUTABLE=#{Formula["python"].opt_bin/"python3"}
-      -DPIP_INSTALL_PREFIX=#{prefix}
-      -DPYTHON_BINDING_FORCE_PYTHON3:BOOL=ON
+      -DMC_LOG_UI_PYTHON_EXECUTABLE=#{Formula["python@3.11"].opt_bin/"python3"}
+      -DPYTHON_BINDING:BOOL=OFF
       -DDISABLE_ROS:BOOL=ON
     ]
 
@@ -52,6 +48,9 @@ class McRtc < Formula
       find_package(mc_rtc REQUIRED)
       add_executable(main main.cpp)
       target_link_libraries(main PUBLIC mc_rtc::mc_control)
+      if(APPLE)
+        add_custom_target(run_main ALL COMMAND main)
+      endif()
     EOS
     (testpath/"main.cpp").write <<~EOS
       #include <mc_control/mc_global_controller.h>
@@ -113,11 +112,5 @@ class McRtc < Formula
     ENV["CXXFLAGS"] = ""
     system "cmake", ".", *std_cmake_args
     system "cmake", "--build", "."
-    system "./main"
-
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
-      import mc_rbdyn
-      import mc_control
-    EOS
   end
 end

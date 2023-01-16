@@ -4,6 +4,7 @@ class McRtc < Formula
   url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v1.11.0/mc_rtc-v1.11.0.tar.gz"
   sha256 "9b377a4a3648a367db94608f58471b0a174abb3e0d12afb37a290b14b63a7878"
   license "BSD-2-Clause"
+  revision 1
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-1.11.0"
@@ -11,7 +12,7 @@ class McRtc < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "cython" => :build
+  depends_on "python"
   depends_on "eigen-quadprog"
   depends_on "geos"
   depends_on "libtool"
@@ -23,20 +24,13 @@ class McRtc < Formula
   depends_on "tasks"
 
   def install
-    xy = Language::Python.major_minor_version Formula["python"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
-
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
-
-    inreplace "cmake/cython/cython.cmake",
-              "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
-              "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
 
     args = std_cmake_args + %W[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
       -DMC_LOG_UI_PYTHON_EXECUTABLE=#{Formula["python"].opt_bin/"python3"}
       -DPIP_INSTALL_PREFIX=#{prefix}
-      -DPYTHON_BINDING_FORCE_PYTHON3:BOOL=ON
+      -DPYTHON_BINDING:BOOL=OFF
       -DDISABLE_ROS:BOOL=ON
     ]
 
@@ -114,10 +108,5 @@ class McRtc < Formula
     system "cmake", ".", *std_cmake_args
     system "cmake", "--build", "."
     system "./main"
-
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
-      import mc_rbdyn
-      import mc_control
-    EOS
   end
 end

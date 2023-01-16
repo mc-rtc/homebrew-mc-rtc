@@ -4,7 +4,7 @@ class McRbdynUrdf < Formula
   url "https://github.com/jrl-umi3218/mc_rbdyn_urdf/releases/download/v1.1.0/mc_rbdyn_urdf-v1.1.0.tar.gz"
   sha256 "54dc59c865fdf5006be2f2cfb6dcac071cb1ff7049df5c2067c93fa1f3aefd90"
   license "BSD-2-Clause"
-  revision 3
+  revision 4
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rbdyn_urdf-1.1.0_3"
@@ -12,7 +12,6 @@ class McRbdynUrdf < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "cython" => :build
   depends_on "rbdyn"
 
   resource "urdf" do
@@ -21,15 +20,12 @@ class McRbdynUrdf < Formula
   end
 
   def install
-    xy = Language::Python.major_minor_version Formula["python"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
-
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
 
     args = std_cmake_args + %W[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
       -DPIP_INSTALL_PREFIX=#{prefix}
-      -DPYTHON_BINDING_FORCE_PYTHON3:BOOL=ON
+      -DPYTHON_BINDING:BOOL=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args
@@ -75,9 +71,5 @@ class McRbdynUrdf < Formula
     system "cmake", ".", *std_cmake_args
     system "cmake", "--build", "."
     system "./main"
-
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
-      import mc_rbdyn_urdf
-    EOS
   end
 end

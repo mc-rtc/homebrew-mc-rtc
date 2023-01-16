@@ -1,10 +1,10 @@
 class Spacevecalg < Formula
   desc "Implementation of spatial vector algebra with the Eigen3 linear algebra library"
   homepage "https://github.com/jrl-umi3218/SpaceVecAlg"
-  url "https://github.com/jrl-umi3218/SpaceVecAlg/releases/download/v1.2.1/SpaceVecAlg-v1.2.1.tar.gz"
-  sha256 "6eea01222db773f5f6e53b96f4a03b4918bd208b91b3c4186c6c56ee50fed21d"
+  url "https://github.com/jrl-umi3218/SpaceVecAlg/releases/download/v1.2.3/SpaceVecAlg-v1.2.3.tar.gz"
+  sha256 "8a1b6cf5427e5e20f0d539e9a8084000878af1b42c06e3c5501006f51c6b92ea"
   license "BSD-2-Clause"
-  revision 2
+  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/spacevecalg-1.2.1_1"

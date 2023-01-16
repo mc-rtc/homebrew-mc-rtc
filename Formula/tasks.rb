@@ -1,10 +1,10 @@
 class Tasks < Formula
   desc "Make real-time control for kinematics tree and list of kinematics tree"
   homepage "https://github.com/jrl-umi3218/Tasks/"
-  url "https://github.com/jrl-umi3218/Tasks/releases/download/v1.7.0/Tasks-v1.7.0.tar.gz"
-  sha256 "2758109ee2c9ff353f6fe7f45819a7be1c8d597b2ccfd95bf295ef7c0e957947"
+  url "https://github.com/jrl-umi3218/Tasks/releases/download/v1.7.2/Tasks-v1.7.2.tar.gz"
+  sha256 "61df37834b226dff09acea2a0ec1a6f380110e9353f0218db9e793816fb145f4"
   license "BSD-2-Clause"
-  revision 2
+  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tasks-1.7.0_1"

@@ -1,10 +1,10 @@
 class Rbdyn < Formula
   desc "Classes and functions to model the dynamics of rigid body systems"
   homepage "https://github.com/jrl-umi3218/RBDyn"
-  url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.6.0/RBDyn-v1.6.0.tar.gz"
-  sha256 "2fc0ad358437350e0051fdca4fb67646ffbe8d49662266fc548cca26c9dc16c1"
+  url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.7.2/RBDyn-v1.7.2.tar.gz"
+  sha256 "8c2881cda829516e988cf598cbd89183ea8decedaa6f1ab4ec28a1f7a96de096"
   license "BSD-2-Clause"
-  revision 1
+  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/rbdyn-1.6.0_1"
@@ -13,7 +13,6 @@ class Rbdyn < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "cython" => :build
   depends_on "boost"
   depends_on "spacevecalg"
   depends_on "tinyxml2"
@@ -25,19 +24,11 @@ class Rbdyn < Formula
   end
 
   def install
-    xy = Language::Python.major_minor_version Formula["python"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
-
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
 
-    inreplace "cmake/cython/cython.cmake",
-              "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
-              "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
-
-    args = std_cmake_args + %W[
+    args = std_cmake_args + %w[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
-      -DPIP_INSTALL_PREFIX=#{prefix}
-      -DPYTHON_BINDING_FORCE_PYTHON3:BOOL=ON
+      -DPYTHON_BINDING:BOOL=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args
@@ -83,9 +74,5 @@ class Rbdyn < Formula
     system "cmake", ".", *std_cmake_args
     system "cmake", "--build", "."
     system "./main"
-
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
-      import rbdyn
-    EOS
   end
 end

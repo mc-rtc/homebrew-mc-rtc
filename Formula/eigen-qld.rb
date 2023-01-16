@@ -4,7 +4,7 @@ class EigenQld < Formula
   url "https://github.com/jrl-umi3218/eigen-qld/releases/download/v1.2.1/eigen-qld-v1.2.1.tar.gz"
   sha256 "680e74f02245885cfa639993dd7224c4f5641f4d40ceb619dce710f93d6791c2"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-qld-1.2.1_1"
@@ -13,24 +13,15 @@ class EigenQld < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "cython" => :build
   depends_on "eigen"
-  depends_on "eigen3topython"
 
   def install
-    xy = Language::Python.major_minor_version Formula["python"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
-
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
-
-    inreplace "cmake/cython/cython.cmake",
-              "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
-              "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
 
     args = std_cmake_args + %W[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
       -DPIP_INSTALL_PREFIX=#{prefix}
-      -DPYTHON_BINDING_FORCE_PYTHON3:BOOL=ON
+      -DPYTHON_BINDING:BOOL=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args
@@ -121,9 +112,5 @@ class EigenQld < Formula
     system "cmake", ".", *std_cmake_args
     system "cmake", "--build", "."
     system "./main"
-
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
-      import eigen_qld
-    EOS
   end
 end

@@ -4,7 +4,7 @@ class Spacevecalg < Formula
   url "https://github.com/jrl-umi3218/SpaceVecAlg/releases/download/v1.2.1/SpaceVecAlg-v1.2.1.tar.gz"
   sha256 "6eea01222db773f5f6e53b96f4a03b4918bd208b91b3c4186c6c56ee50fed21d"
   license "BSD-2-Clause"
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/spacevecalg-1.2.1_1"
@@ -13,22 +13,12 @@ class Spacevecalg < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "cython" => :build
   depends_on "eigen"
-  depends_on "eigen3topython"
 
   def install
-    xy = Language::Python.major_minor_version Formula["python"].opt_bin/"python3"
-    ENV.prepend_create_path "PYTHONPATH", Formula["cython"].opt_libexec/"lib/python#{xy}/site-packages"
-
-    inreplace "cmake/cython/cython.cmake",
-              "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
-              "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
-
     args = std_cmake_args + %W[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
-      -DPIP_INSTALL_PREFIX=#{prefix}
-      -DPYTHON_BINDING_FORCE_PYTHON3:BOOL=ON
+      -DPYTHON_BINDING:BOOL=OFF
     ]
 
     system "cmake", "-S", ".", "-B", "build", *args
@@ -37,11 +27,6 @@ class Spacevecalg < Formula
   end
 
   test do
-    system Formula["python"].opt_bin/"python3", "-c", <<~EOS
-      import sva
-      print(sva.PTransformd.Identity())
-    EOS
-
     (testpath/"CMakeLists.txt").write <<~EOS
       cmake_minimum_required(VERSION 3.1)
       project(BrewSpaceVecAlg LANGUAGES CXX)

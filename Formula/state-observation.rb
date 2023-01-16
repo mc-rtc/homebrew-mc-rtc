@@ -1,10 +1,10 @@
 class StateObservation < Formula
   desc "Describes interfaces for state observers, and implements some observers"
   homepage "https://github.com/jrl-umi3218/state-observation/"
-  url "https://github.com/jrl-umi3218/state-observation/releases/download/v1.4.1/state-observation-v1.4.1.tar.gz"
-  sha256 "12707b491a98be8cf9aad68469683610ed80691a119f3e4643a99db8e95c72be"
+  url "https://github.com/jrl-umi3218/state-observation/releases/download/v1.5.0/state-observation-v1.5.0.tar.gz"
+  sha256 "509529785a14459b48edd4943840add9315f1d947db1db6f79f7f7ef1ac02d99"
   license "BSD-2-Clause"
-  revision 2
+  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/state-observation-1.4.1_2"

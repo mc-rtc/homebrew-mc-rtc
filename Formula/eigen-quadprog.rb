@@ -4,7 +4,7 @@ class EigenQuadprog < Formula
   url "https://github.com/jrl-umi3218/eigen-quadprog/releases/download/v1.1.1/eigen-quadprog-v1.1.1.tar.gz"
   sha256 "65274400ac887a6cc61dab2c30bc5fbdb2c364efd5e07788301e04583f8b6a31"
   license "LGPL-3.0-only"
-  revision 1
+  revision 2
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-quadprog-1.1.1_1"

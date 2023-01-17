@@ -20,7 +20,7 @@ class McRtc < Formula
   depends_on "nanomsg"
   depends_on "ndcurves"
   depends_on "pkg-config"
-  depends_on "python"
+  depends_on "python@3.11"
   depends_on "spdlog"
   depends_on "state-observation"
   depends_on "tasks"
@@ -31,8 +31,7 @@ class McRtc < Formula
 
     args = std_cmake_args + %W[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
-      -DMC_LOG_UI_PYTHON_EXECUTABLE=#{Formula["python"].opt_bin/"python3"}
-      -DPIP_INSTALL_PREFIX=#{prefix}
+      -DMC_LOG_UI_PYTHON_EXECUTABLE=#{Formula["python@3.11"].opt_bin/"python3"}
       -DPYTHON_BINDING:BOOL=OFF
       -DDISABLE_ROS:BOOL=ON
     ]

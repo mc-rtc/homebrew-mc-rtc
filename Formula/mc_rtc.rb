@@ -48,6 +48,7 @@ class McRtc < Formula
       find_package(mc_rtc REQUIRED)
       add_executable(main main.cpp)
       target_link_libraries(main PUBLIC mc_rtc::mc_control)
+      add_custom_target(run_main ALL COMMAND main)
     EOS
     (testpath/"main.cpp").write <<~EOS
       #include <mc_control/mc_global_controller.h>
@@ -109,6 +110,5 @@ class McRtc < Formula
     ENV["CXXFLAGS"] = ""
     system "cmake", ".", *std_cmake_args
     system "cmake", "--build", "."
-    system "./main"
   end
 end

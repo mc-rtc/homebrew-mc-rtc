@@ -11,7 +11,7 @@ class McRtc < Formula
     sha256 x86_64_linux: "c90c6c02f8cc75c5964fe6b8e006bce09e7613f96739782ad61c1344f7a54624"
   end
 
-  depends_on "cmake" => [:build, :test]
+  depends_on "cmake"
   depends_on "eigen-quadprog"
   depends_on "geos"
   depends_on "libnotify"
@@ -19,6 +19,7 @@ class McRtc < Formula
   depends_on "mc_rtc_data"
   depends_on "nanomsg"
   depends_on "ndcurves"
+  depends_on "pkg-config"
   depends_on "python"
   depends_on "spdlog"
   depends_on "state-observation"

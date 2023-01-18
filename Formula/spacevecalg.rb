@@ -16,7 +16,7 @@ class Spacevecalg < Formula
   depends_on "eigen"
 
   def install
-    args = std_cmake_args + %W[
+    args = std_cmake_args + %w[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
       -DPYTHON_BINDING:BOOL=OFF
     ]

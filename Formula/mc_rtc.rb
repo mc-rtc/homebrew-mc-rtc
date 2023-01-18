@@ -12,13 +12,13 @@ class McRtc < Formula
   end
 
   depends_on "cmake" => [:build, :test]
-  depends_on "python"
   depends_on "eigen-quadprog"
   depends_on "geos"
   depends_on "libtool"
   depends_on "mc_rtc_data"
   depends_on "nanomsg"
   depends_on "ndcurves"
+  depends_on "python"
   depends_on "spdlog"
   depends_on "state-observation"
   depends_on "tasks"

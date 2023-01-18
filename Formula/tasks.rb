@@ -29,7 +29,7 @@ class Tasks < Formula
               "set(PIP_EXTRA_OPTIONS --target \"${PIP_TARGET}\")",
               "set(PIP_EXTRA_OPTIONS --prefix \"${PIP_INSTALL_PREFIX}\")"
 
-    args = std_cmake_args + %W[
+    args = std_cmake_args + %w[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
       -DPYTHON_BINDING:BOOL=OFF
     ]

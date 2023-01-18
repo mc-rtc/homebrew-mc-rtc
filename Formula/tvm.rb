@@ -1,5 +1,5 @@
 class TVM < Formula
-  desc "A library meant for writing and solving linear control problems for robot"
+  desc "Writing and solving linear control problems for robot"
   homepage "https://github.com/jrl-umi3218/tvm/"
   url "https://github.com/jrl-umi3218/tvm/releases/download/v0.9.0/tvm-v0.9.0.tar.gz"
   sha256 "761265694287c36bff1c406ee0b6f2936234a4e1e69736caa6a4976d2813d050"

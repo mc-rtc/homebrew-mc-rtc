@@ -26,7 +26,7 @@ class Rbdyn < Formula
   def install
     ENV["HOMEBREW_ARCHFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
 
-    args = std_cmake_args + %W[
+    args = std_cmake_args + %w[
       -DINSTALL_DOCUMENTATION:BOOL=OFF
       -DPYTHON_BINDING:BOOL=OFF
     ]

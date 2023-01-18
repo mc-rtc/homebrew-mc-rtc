@@ -6,6 +6,12 @@ class Tvm < Formula
   license "BSD-2-Clause"
   revision 0
 
+  bottle do
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tvm-0.9.0"
+    sha256 cellar: :any,                 monterey:     "8912a594c0af211cba8c3f21d231b4b557d69e70a11eb7d1f9cfa7e7855de558"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "34cb30d721c188c8ee7330595608b1529fe0a71a313643fef87a704045d393df"
+  end
+
   depends_on "cmake" => [:build, :test]
   depends_on "boost"
   depends_on "eigen-qld"

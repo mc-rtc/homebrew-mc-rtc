@@ -1,8 +1,8 @@
 class McRtc < Formula
   desc "Interface for simulated and real robotic systems suitable for real-time control"
   homepage "https://jrl-umi3218.github.io/mc_rtc/"
-  url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v2.4.0/mc_rtc-v2.4.0.tar.gz"
-  sha256 "06413e39e1ec6b9e9f31913974d4d7a6cd3cac8450e1ba22e61e833dd7fd59c9"
+  url "https://github.com/jrl-umi3218/mc_rtc/releases/download/v2.5.0/mc_rtc-v2.5.0.tar.gz"
+  sha256 "78e1ca3d2508b01ed5e082ded3274073dd9d060f603a883c5f674d5613c9eb62"
   license "BSD-2-Clause"
   revision 0
 

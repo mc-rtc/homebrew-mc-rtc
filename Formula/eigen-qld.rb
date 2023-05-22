@@ -1,10 +1,10 @@
 class EigenQld < Formula
   desc "Allows to use the QLD QP solver with the Eigen3 library"
   homepage "https://github.com/jrl-umi3218/eigen-qld"
-  url "https://github.com/jrl-umi3218/eigen-qld/releases/download/v1.2.1/eigen-qld-v1.2.1.tar.gz"
-  sha256 "680e74f02245885cfa639993dd7224c4f5641f4d40ceb619dce710f93d6791c2"
+  url "https://github.com/jrl-umi3218/eigen-qld/releases/download/v1.2.3/eigen-qld-v1.2.3.tar.gz"
+  sha256 "af24999565d81bf9acfd8b7198001b7b984b800f981b3c372d9ba7e9587cfbb2"
   license "BSD-2-Clause"
-  revision 2
+  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-qld-1.2.1_2"

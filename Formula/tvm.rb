@@ -1,10 +1,10 @@
 class Tvm < Formula
   desc "Writing and solving linear control problems for robot"
   homepage "https://github.com/jrl-umi3218/tvm/"
-  url "https://github.com/jrl-umi3218/tvm/releases/download/v0.9.0/tvm-v0.9.0.tar.gz"
-  sha256 "761265694287c36bff1c406ee0b6f2936234a4e1e69736caa6a4976d2813d050"
+  url "https://github.com/jrl-umi3218/tvm/releases/download/v0.9.1/tvm-v0.9.1.tar.gz"
+  sha256 "dfc1c37ff1b0b220fd19896f0147e9769c2207a2ccb05e55b090f252c34b8877"
   license "BSD-2-Clause"
-  revision 1
+  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tvm-0.9.0_1"

@@ -7,9 +7,9 @@ class Spacevecalg < Formula
   revision 0
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/spacevecalg-1.2.4"
-    sha256 cellar: :any_skip_relocation, monterey:     "9c02769c93aa2908b6e88d473289af41954faefd628cc2cfa23cf214d5a1120a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d312e2ddc4ef9bcf8453c4e2415d220ae8ddb13d087bf8c8c4909fb9dc4ee0e7"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/spacevecalg-1.2.5"
+    sha256 cellar: :any_skip_relocation, monterey:     "2ba94604ce3b9dee48abe1c0f96c82ac6a91a7f523ea5e799c9f0d9606c8fb03"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e2a32e8b2d07300ec26045b2f65fda63132f35ef03055faae2787a3696cf3f34"
   end
 
   depends_on "cmake" => [:build, :test]

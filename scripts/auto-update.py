@@ -21,14 +21,14 @@ formula_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../Formul
 repos_to_formula = {
         'jrl-umi3218/eigen-qld': 'eigen-qld.rb',
         'jrl-umi3218/eigen-quadprog': 'eigen-quadprog.rb',
-        'jrl-umi3218/mc_rtc_data': 'mc_rtc_data.rb',
-        'jrl-umi3218/mc_rtc': 'mc_rtc.rb',
+        'jrl-umi3218/SpaceVecAlg': 'spacevecalg.rb',
         'jrl-umi3218/RBDyn': 'rbdyn.rb',
         'jrl-umi3218/sch-core': 'sch-core.rb',
-        'jrl-umi3218/SpaceVecAlg': 'spacevecalg.rb',
-        'jrl-umi3218/state-observation': 'state-observation.rb',
         'jrl-umi3218/Tasks': 'tasks.rb',
         'jrl-umi3218/tvm': 'tvm.rb',
+        'jrl-umi3218/state-observation': 'state-observation.rb',
+        'jrl-umi3218/mc_rtc_data': 'mc_rtc_data.rb',
+        'jrl-umi3218/mc_rtc': 'mc_rtc.rb',
 }
 
 g = Github(sys.argv[1])

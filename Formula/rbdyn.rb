@@ -1,8 +1,8 @@
 class Rbdyn < Formula
   desc "Classes and functions to model the dynamics of rigid body systems"
   homepage "https://github.com/jrl-umi3218/RBDyn"
-  url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.8.1/RBDyn-v1.8.1.tar.gz"
-  sha256 "4dc7066c130d27be3d84e03912347f7303f88efb37253db147e1e7fdfbf35fe0"
+  url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.8.2/RBDyn-v1.8.2.tar.gz"
+  sha256 "ceac9702fdf4b627b2acf92078766c56b6160b500e282dc9e4c8167216191d05"
   license "BSD-2-Clause"
   revision 0
 

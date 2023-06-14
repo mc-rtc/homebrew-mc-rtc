@@ -7,9 +7,9 @@ class StateObservation < Formula
   revision 0
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/state-observation-1.5.0"
-    sha256 cellar: :any,                 monterey:     "1a496acdc64a145f62ff3a8f0170194fee3db006c52293f5e25748c135ec130d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "ebcf0f3de3db66376c44b181c7fc6db28736711ef51625e1c58615c5354631d2"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/state-observation-1.5.1"
+    sha256 cellar: :any,                 monterey:     "098f6ee15383c1647b3507a75c7e7a1c0609851f710cc9380a3bd0e396af447b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "01128a2b2e1a4ae5aa2b760bf34f82cf35e2920dde7a7e1762270f42f77dfd9a"
   end
 
   depends_on "cmake" => [:build, :test]

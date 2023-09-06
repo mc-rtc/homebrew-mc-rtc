@@ -7,9 +7,9 @@ class Tvm < Formula
   revision 0
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tvm-0.9.1"
-    sha256 cellar: :any,                 monterey:     "22535404a01af1e62f747b894b94e4ffbaa4ed58bc55bd960899ff70397ff66c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "96ebb4129e65b86f3fc7bc1ac38fd4be5185d5f960f4762e77880451296db646"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tvm-0.9.2"
+    sha256 cellar: :any,                 monterey:     "4f22a73d78b3dc369665dfc58abdf13ce92a83dc2ad6775be5952c0c7688975f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a8c85fe470e4ff61d6537584d1d15d379fec130246b153b1643e01491d3e61d4"
   end
 
   depends_on "cmake" => [:build, :test]

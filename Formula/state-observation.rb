@@ -1,8 +1,8 @@
 class StateObservation < Formula
   desc "Describes interfaces for state observers, and implements some observers"
   homepage "https://github.com/jrl-umi3218/state-observation/"
-  url "https://github.com/jrl-umi3218/state-observation/releases/download/v1.5.2/state-observation-v1.5.2.tar.gz"
-  sha256 "8139bc4d57e0d0d63e61c6e0c5ebb9fe7b0c9eb66776dffc759a47499f482f18"
+  url "https://github.com/jrl-umi3218/state-observation/releases/download/v1.5.3/state-observation-v1.5.3.tar.gz"
+  sha256 "8f4814649d7dc9444b5dc7e1ee156320315a340d1cf942bea715b09df6675014"
   license "BSD-2-Clause"
   revision 0
 

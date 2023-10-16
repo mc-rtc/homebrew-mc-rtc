@@ -7,8 +7,9 @@ class EigenQuadprog < Formula
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-quadprog-1.1.2"
-    sha256 cellar: :any,                 monterey:     "574b630c572c590142dce0d23454db02b9646957c0ee1ae2cfd9b7e39bfe15ba"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "5cee58221053d2caacc6d91491f1b4efda42fcf0f3d77a173b330e89da0b5ec2"
+    rebuild 1
+    sha256 cellar: :any,                 monterey:     "db0b7529b6c1460250667a831c4c0b438bca82ecd830b60eb5ddabb2a8277643"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a147a730b818409633d42d5583c4c8410349c2b2f070d1daac3fd5a4a61d58b8"
   end
 
   depends_on "cmake" => [:build, :test]

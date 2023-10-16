@@ -7,8 +7,9 @@ class EigenQld < Formula
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-qld-1.2.4"
-    sha256 cellar: :any,                 monterey:     "28810f2a3c027c1e78a8fb5f232efaaaa112c477408c5e512e8c3fa47534b0a5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b80c2827b6a33812ec9a5c73b818ab152117ce93180ee73c01d667415401a796"
+    rebuild 1
+    sha256 cellar: :any,                 monterey:     "e71f860e6f92b13001525d9cfa28955c5e1174024fd0d3d07480e2ede3acebe8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a9ee65573a385ccab7849d66863cee5a2ba4de38f88167247de7cd55896f2632"
   end
 
   depends_on "cmake" => [:build, :test]

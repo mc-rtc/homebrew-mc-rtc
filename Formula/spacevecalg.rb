@@ -4,7 +4,6 @@ class Spacevecalg < Formula
   url "https://github.com/jrl-umi3218/SpaceVecAlg/releases/download/v1.2.5/SpaceVecAlg-v1.2.5.tar.gz"
   sha256 "a57ab3f594f49d4f247a0f5fb6422ae7d8583337b489b58a734b02c8489ed618"
   license "BSD-2-Clause"
-  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/spacevecalg-1.2.5"

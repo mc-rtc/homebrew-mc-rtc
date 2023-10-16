@@ -4,7 +4,6 @@ class Rbdyn < Formula
   url "https://github.com/jrl-umi3218/RBDyn/releases/download/v1.8.2/RBDyn-v1.8.2.tar.gz"
   sha256 "ceac9702fdf4b627b2acf92078766c56b6160b500e282dc9e4c8167216191d05"
   license "BSD-2-Clause"
-  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/rbdyn-1.8.2"

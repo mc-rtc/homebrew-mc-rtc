@@ -6,9 +6,9 @@ class StateObservation < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/state-observation-1.5.2"
-    sha256 cellar: :any,                 monterey:     "f546cf670c49fb89494d7cc6c67bda229a0c4b622f7bdba2629d7051417423a0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4c91e63be0fdc8ad2d5559f2a202112177eb317d72db150b3c1113d7ac11a145"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/state-observation-1.5.3"
+    sha256 cellar: :any,                 monterey:     "5c53949dbb2daaead4c5f1cc53262fe2c4390b677e800d18cc67c671c3048c00"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9a9dca4e551339e5112d1b2f4d63f9047cc850941d046d6539f37285960cb33a"
   end
 
   depends_on "cmake" => [:build, :test]

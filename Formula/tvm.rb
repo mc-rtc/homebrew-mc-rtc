@@ -4,7 +4,6 @@ class Tvm < Formula
   url "https://github.com/jrl-umi3218/tvm/releases/download/v0.9.2/tvm-v0.9.2.tar.gz"
   sha256 "9b25ad4d068ba980e25ae0f600830bcb7cab4cd5fbb7aca337dacaf0678f3a69"
   license "BSD-2-Clause"
-  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/tvm-0.9.2"

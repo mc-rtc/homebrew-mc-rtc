@@ -52,6 +52,6 @@ for stub, formula in repos_to_formula.items():
     formula_data = formula_data.replace(prev_sha, new_sha)
     revision_match = revision.match(formula_data)
     if revision_match:
-        formula_data = formula_data.replace("revision {}".format(revision_match.group(1)), "revision 0")
+        formula_data = formula_data.replace("revision {}".format(revision_match.group(1)), "")
     open(os.path.join(formula_dir, formula), 'w').write(formula_data)
     os.system('cd {} && git add {} && git commit -m "[{}] Update to {}"'.format(formula_dir, formula, formula.replace('.rb', ''), tag.replace('v', '')))

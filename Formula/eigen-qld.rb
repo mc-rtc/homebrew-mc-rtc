@@ -4,7 +4,6 @@ class EigenQld < Formula
   url "https://github.com/jrl-umi3218/eigen-qld/releases/download/v1.2.4/eigen-qld-v1.2.4.tar.gz"
   sha256 "631a69015f2c9e36243e390254adfc57293599a1fd18d35a22e5a6b6f8c5a4f0"
   license "BSD-2-Clause"
-  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/eigen-qld-1.2.4"

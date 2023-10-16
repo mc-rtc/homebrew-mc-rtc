@@ -4,7 +4,6 @@ class SchCore < Formula
   url "https://github.com/jrl-umi3218/sch-core/releases/download/v1.4.2/sch-core-v1.4.2.tar.gz"
   sha256 "6e8e23108987fb3ebc5cc6a651ff17cfb77fc8373cc69be8ad3999c6f3ac82cf"
   license "BSD-2-Clause"
-  revision 0
 
   bottle do
     root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/sch-core-1.4.2"

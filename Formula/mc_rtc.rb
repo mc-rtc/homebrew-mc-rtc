@@ -6,8 +6,8 @@ class McRtc < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-2.7.0"
-    sha256 x86_64_linux: "cf24ded1cdff3297934362342dafdcdde7c88fb91afdcf57c27433b325407783"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc-2.9.2"
+    sha256 x86_64_linux: "c3b789b05d8e7325fc8bfc8f20288e5266e0c328be816f64a1fb04c38c4624fb"
   end
 
   depends_on "cmake"

@@ -6,9 +6,9 @@ class McRtcData < Formula
   license "BSD-2-Clause"
 
   bottle do
-    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc_data-1.0.6"
-    sha256 cellar: :any_skip_relocation, monterey:     "8181982240cd6ae85ea1170464b83a867dc5064d88449c31c7971276cc6d59b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b58418118e28c17b0196506a86c4eb90753501ee327bc235c42e5c944325691e"
+    root_url "https://github.com/mc-rtc/homebrew-mc-rtc/releases/download/mc_rtc_data-1.0.7"
+    sha256 cellar: :any_skip_relocation, monterey:     "449ec7a99e9d1df22203f2d87bcd3c8f200047da45c7a7662f7904c60b460b2b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "57cf575b77641da230c687535ab13562c37a9d61e900ca8ef6e7e4d5a695b556"
   end
 
   depends_on "cmake" => [:build, :test]
